@@ -1,7 +1,7 @@
 package TP1;
 
-import TP1.Veterinaria.Alimento;
-import TP1.Veterinaria.Animal;
+import TP1.veterinaria.Alimento;
+import TP1.veterinaria.Animal;
 
 public class TP1Main {
 

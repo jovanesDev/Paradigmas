@@ -2,18 +2,13 @@ package TP3;
 
 public class Futbolista {
    private  String nombre;
-   private String equipo;
+   private final String equipo;
    private int goles;
-   public static int cantidadJugadores = 0;
    public static Futbolista maximoGoleador;
-   public static Futbolista[] generalFutbolistas = new Futbolista[3];
 
-    public Futbolista(String nombre, String equipo, int goles) {
+    public Futbolista(String nombre, String equipo) {
         this.nombre = nombre;
         this.equipo = equipo;
-        this.goles = goles;
-        generalFutbolistas[cantidadJugadores] = this;
-        cantidadJugadores++;
     }
 
     public String getNombre() {
@@ -24,13 +19,6 @@ public class Futbolista {
         this.nombre = nombre;
     }
 
-    public String getEquipo() {
-        return equipo;
-    }
-
-    public void setEquipo(String equipo) {
-        this.equipo = equipo;
-    }
 
     public int getGoles() {
         return goles;
@@ -38,22 +26,16 @@ public class Futbolista {
 
 
     public void anotarGol () {
+
         this.goles++;
         setearMaximoJugador();
     }
 
-    public static void setearMaximoJugador () {
-        maximoGoleador = generalFutbolistas[0];
-        if(generalFutbolistas[1] == null){
-            return;
+    public void setearMaximoJugador() {
+        if(maximoGoleador == null){
+            maximoGoleador = this;
         }
-            for(int i = 0; i < generalFutbolistas.length -1 ; i++ ){
-
-                if(maximoGoleador.getGoles() < generalFutbolistas[i].getGoles()){
-                    maximoGoleador = generalFutbolistas[i];
-                }
-            }
-
+        if(this.getGoles() > maximoGoleador.getGoles()) maximoGoleador = this;
     }
 
     @Override

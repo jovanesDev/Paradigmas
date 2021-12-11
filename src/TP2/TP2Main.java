@@ -1,9 +1,9 @@
 package TP2;
 
-import TP2.AulasVirtuales.Alumno;
-import TP2.AulasVirtuales.Docente;
-import TP2.AulasVirtuales.Materia;
-import TP2.AulasVirtuales.Persona;
+import TP2.aulas_virtuales.Alumno;
+import TP2.aulas_virtuales.Docente;
+import TP2.aulas_virtuales.Materia;
+import TP2.aulas_virtuales.Persona;
 
 public class TP2Main {
 

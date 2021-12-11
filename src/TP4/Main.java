@@ -1,7 +1,7 @@
 package TP4;
 
-import TP4.Animal.*;
-import TP4.Matematica.Exponenciador;
+import TP4.animal.*;
+import TP4.matematica.Exponenciador;
 
 public class Main {
 

@@ -1,7 +1,6 @@
 package TP3;
 
-import TP3.Auto.Auto;
-import TP3.Auto.FabricaDeAutos;
+import TP3.auto.FabricaDeAutos;
 
 public class TP3Main {
 
@@ -31,12 +30,15 @@ public class TP3Main {
 
         System.out.println("__________________________");
 
-        Futbolista messi = new Futbolista("Messi","PSG",10);
-        Futbolista ronaldo = new Futbolista("Ronaldo","MU",9);
-        Futbolista tevez = new Futbolista("Tevez","Boca",6);
+        Futbolista messi = new Futbolista("Messi","PSG");
+        Futbolista ronaldo = new Futbolista("Ronaldo","MU");
+        Futbolista tevez = new Futbolista("Tevez","Boca");
 
+        messi.anotarGol();
         ronaldo.anotarGol();
         ronaldo.anotarGol();
+        tevez.anotarGol();
+
         System.out.println(Futbolista.maximoGoleador);
 
         System.out.println("__________________________");
